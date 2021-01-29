@@ -40,7 +40,11 @@ export default {
   },
   methods: {
     next() {
-      this.index++;
+      if (this.index === 10) {
+        alert('Finished!');
+      } else {
+        this.index++;
+      }
     },
     increment(isCorrect) {
       if (isCorrect) {
