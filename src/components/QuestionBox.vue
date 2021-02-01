@@ -64,7 +64,6 @@ export default {
         this.shuffleAnswers();
       }
     }
-
     // currentQuestion() {
     //   this.selectedIndex = null;
     //   this.shuffleAnswers();
