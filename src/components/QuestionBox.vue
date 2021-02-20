@@ -19,13 +19,23 @@
       </b-list-group>
 
       <b-button
+        @click="previous"
+        variant="warning"
+      >
+        Previous
+      </b-button>
+
+      <b-button
         variant="primary"
         @click="submitAnswer"
         :disabled="selectedIndex === null || answered"
       >
         Submit
       </b-button>
-      <b-button @click="next" variant="success">
+      <b-button
+        @click="next"
+        variant="success"
+      >
         Next
       </b-button>
     </b-jumbotron>
@@ -38,6 +48,7 @@ export default {
   props: {
     currentQuestion: Object,
     next: Function,
+    previous: Function,
     increment: Function
   },
   data() {

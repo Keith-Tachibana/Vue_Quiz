@@ -12,6 +12,7 @@
             v-if="questions.length"
             :currentQuestion="questions[index]"
             :next="next"
+            :previous="previous"
             :increment="increment"
           />
         </b-col>
@@ -44,6 +45,13 @@ export default {
         alert('Finished!');
       } else {
         this.index++;
+      }
+    },
+    previous() {
+      if (this.index === 1) {
+        alert("You're at the beginning!");
+      } else {
+        this.index--;
       }
     },
     increment(isCorrect) {
